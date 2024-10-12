@@ -31,6 +31,9 @@ const Head = () => {
       <meta property="twitter:title" content={titleContent} />
       <meta property="twitter:description" content={description} />
       <meta property="twitter:image" content={image} />
+
+      {/* google site verification */}
+      <meta name="google-site-verification" content="LbX2O1wn_arb_DSJ-CzEDjeE4eS9sC2wqPNUjs4MdUQ" />
       <ColorSchemeScript />
     </head>
   );
