@@ -2,6 +2,7 @@
 
 import { useWindowScroll } from "@mantine/hooks";
 import { Affix, Button, Transition } from "@mantine/core";
+import { IoIosArrowUp } from "react-icons/io";
 
 function ScrollToTop() {
   const [scroll, scrollTo] = useWindowScroll();
@@ -13,9 +14,9 @@ function ScrollToTop() {
           <Button
             style={transitionStyles}
             radius={"lg"}
-            className="bg-accent text-white hover:bg-primary transition-all ease-linear duration-100"
+            className="w-12 h-12 bg-accent text-white p-0 hover:bg-primary transition-all ease-linear duration-100"
             onClick={() => scrollTo({ y: 0 })}>
-            Scroll to top
+              <IoIosArrowUp className="text-2xl" />
           </Button>
         )}
       </Transition>

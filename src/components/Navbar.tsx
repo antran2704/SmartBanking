@@ -1,16 +1,36 @@
 "use client";
 
 import { Burger, Button, CloseButton } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
+import { useDisclosure, useWindowScroll } from "@mantine/hooks";
 import Link from "next/link";
 import clsx from "clsx";
+import { useEffect } from "react";
 
 const Navbar = () => {
   const [opened, { toggle }] = useDisclosure();
+  const [scroll] = useWindowScroll();
+
+  useEffect(() => {
+    if(opened) {
+      document.querySelector("body")?.classList.add("disable__scroll")
+    }
+
+    return () => {
+      document.querySelector("body")?.classList.remove("disable__scroll")
+    }
+  }, [opened]);
 
   return (
-    <div className="w-full fixed top-0 z-50">
-      <div className="container flex items-center justify-between mx-auto p-5">
+    <div className={clsx("w-full fixed top-0 z-[999]")}>
+      <div
+        className={clsx(
+          "container flex items-center justify-between mx-auto p-5 transition-all ease-linear duration-100 ",
+          [
+            scroll.y > 100
+              ? "bg-[rgba(0,0,0,0.4)] backdrop-blur-lg"
+              : "bg-transparent",
+          ],
+        )}>
         <Link href={"/"}>
           <img
             src="/images/logo.png"
@@ -68,13 +88,17 @@ const Navbar = () => {
           !opened && "pointer-events-none",
         ])}>
         <div
-        onClick={toggle}
+          onClick={toggle}
           className={clsx(
             "absolute top-0 bottom-0 left-0 right-0 bg-black/50 transition-all ease-linear duration-100 z-0",
             [opened ? "opacity-100" : "opacity-0"],
           )}
         />
-        <div className={clsx("relative md:w-1/2 w-3/4 h-full bg-white p-5 transition-all ease-linear duration-100", [opened ? "translate-x-[0%]" : "-translate-x-full"])}>
+        <div
+          className={clsx(
+            "relative md:w-1/2 w-3/4 h-full bg-white p-5 transition-all ease-linear duration-100",
+            [opened ? "translate-x-[0%]" : "-translate-x-full"],
+          )}>
           <div className="flex items-center justify-between pb-10">
             <Link href={"/"}>
               <img

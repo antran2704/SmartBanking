@@ -3,12 +3,12 @@ import { Button } from "@mantine/core";
 const Hero = () => {
   return (
     <div className="bg-[url('/images/mask.png')] bg-cover bg-center bg-no-repeat">
-      <div className="container flex lg:flex-row flex-col justify-center py-40 px-5 gap-20">
-        <div className="lg:w-2/4 w-3/4 pt-10 mx-auto">
-          <h1 className="lg:text-6xl sm:text-3xl text-2xl font-bold text-white">
+      <div className="container flex lg:flex-row flex-col justify-center md:py-40 py-20 px-5 gap-20">
+        <div className="lg:w-2/4 md:w-3/4 w-full pt-10 mx-auto">
+          <h1 className="lg:text-6xl sm:text-3xl text-2xl font-bold text-white md:text-left text-center">
             Smart Banking for freelancers
           </h1>
-          <p className="text-lg py-10 text-white">
+          <p className="text-lg md:py-10 py-5 text-white md:text-left text-center">
             Draft is a revolutionary mobile app built to help you manage your
             business easily and save your money.
           </p>
@@ -26,7 +26,7 @@ const Hero = () => {
                 className="size-6 min-w-6"
               />
             }
-            className="bg-[#16194F] hover:bg-primary text-white px-10 transition-all ease-linear duration-75">
+            className="block bg-[#16194F] hover:bg-primary text-white px-10 md:mx-0 mx-auto transition-all ease-linear duration-75">
             Register Now
           </Button>
         </div>

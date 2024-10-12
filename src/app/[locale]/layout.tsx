@@ -7,6 +7,7 @@ import "~/app/globals.scss";
 import configThemeMantine from "../../configs/ThemeMantine";
 import Navbar from "~/components/Navbar";
 import ScrollToTop from "~/components/ScrollToTop";
+import Footer from "~/components/Footer";
 
 export default async function LocaleLayout({
   children,
@@ -24,12 +25,13 @@ export default async function LocaleLayout({
       <head>
         <ColorSchemeScript />
       </head>
-      <body className="bg-neutral-50">
+      <body id="body" className="bg-neutral-50">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <MantineProvider theme={configThemeMantine}>
             <Navbar />
             {children}
             <ScrollToTop />
+            <Footer />
           </MantineProvider>
         </NextIntlClientProvider>
       </body>
