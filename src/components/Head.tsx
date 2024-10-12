@@ -4,8 +4,8 @@ const titleContent: string = "Smart Banking";
 const description: string =
   "This is Smart Banking website was created by Antran. Website have 4 part: Home, Feature, Pricing, FAQ. So, why you don't review it once???";
 
-const image: string = "/images/imageHeadTag.png";
-const urlWebsite: string = "https://smart-banking-nine.vercel.app";
+const image: string = "https://antrandev.id.vn/images/imageHeadTag.png";
+const urlWebsite: string = "https://antrandev.id.vn";
 
 const Head = () => {
   return (
