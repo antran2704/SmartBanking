@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div >
+    <div>
       <div className="container flex md:flex-row flex-col justify-between py-10  px-5 gap-10">
         <div className="md:w-4/12 w-full flex flex-col md:items-start items-center">
           <Link href={"/"}>
@@ -21,21 +21,24 @@ const Footer = () => {
             <li>
               <Link
                 href={"/"}
-                className="text-lg text-neutral-100 hover:underline">
+                className="text-lg text-neutral-100 hover:underline"
+              >
                 Team
               </Link>
             </li>
             <li>
               <Link
                 href={"/"}
-                className="text-lg text-neutral-100 hover:underline">
+                className="text-lg text-neutral-100 hover:underline"
+              >
                 Press
               </Link>
             </li>
             <li>
               <Link
                 href={"/"}
-                className="text-lg text-neutral-100 hover:underline">
+                className="text-lg text-neutral-100 hover:underline"
+              >
                 Fees
               </Link>
             </li>
@@ -44,21 +47,24 @@ const Footer = () => {
             <li>
               <Link
                 href={"/"}
-                className="text-lg text-neutral-100 hover:underline">
+                className="text-lg text-neutral-100 hover:underline"
+              >
                 Services
               </Link>
             </li>
             <li>
               <Link
                 href={"/"}
-                className="text-lg text-neutral-100 hover:underline">
+                className="text-lg text-neutral-100 hover:underline"
+              >
                 Projects
               </Link>
             </li>
             <li>
               <Link
                 href={"/"}
-                className="text-lg text-neutral-100 hover:underline">
+                className="text-lg text-neutral-100 hover:underline"
+              >
                 Affiliate
               </Link>
             </li>
@@ -67,21 +73,24 @@ const Footer = () => {
             <li>
               <Link
                 href={"/"}
-                className="text-lg text-neutral-100 hover:underline">
+                className="text-lg text-neutral-100 hover:underline"
+              >
                 Terms of use
               </Link>
             </li>
             <li>
               <Link
                 href={"/"}
-                className="text-lg text-neutral-100 hover:underline">
+                className="text-lg text-neutral-100 hover:underline"
+              >
                 Privacy policy
               </Link>
             </li>
             <li>
               <Link
                 href={"/"}
-                className="text-lg text-neutral-100 hover:underline">
+                className="text-lg text-neutral-100 hover:underline"
+              >
                 Contact us
               </Link>
             </li>

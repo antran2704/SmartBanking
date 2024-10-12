@@ -1,6 +1,16 @@
+"use client";
+
+import useScrollActiveNavbar from "~/app/hooks/useScrollActiveNavbar";
+
 const Card = () => {
+  const { ref } = useScrollActiveNavbar({ path: "#feature" });
+
   return (
-    <div className="container flex md:flex-row flex-col items-center px-5 py-10 gap-5">
+    <div
+      ref={ref}
+      id="feature"
+      className="container flex md:flex-row flex-col items-center px-5 py-10 gap-5"
+    >
       <div className="flex flex-col md:items-start items-center md:w-1/2 sm:w-3/4 w-full">
         <h2 className="md:text-5xl text-4xl md:text-left text-center font-bold text-primary">
           One card for all your payments

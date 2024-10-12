@@ -1,10 +1,12 @@
 "use client";
 
 import { Accordion } from "@mantine/core";
+import useScrollActiveNavbar from "~/app/hooks/useScrollActiveNavbar";
 
 const groceries = [
   {
-    value: "What is the difference between Draft and a traditional bank account?",
+    value:
+      "What is the difference between Draft and a traditional bank account?",
     description:
       "Crisp and refreshing fruit. Apples are known for their versatility and nutritional benefits. They come in a variety of flavors and are great for snacking, baking, or adding to salads.",
   },
@@ -31,8 +33,10 @@ const groceries = [
 ];
 
 const FAQ = () => {
+  const { ref } = useScrollActiveNavbar({ path: "#faq" });
+
   return (
-    <div className="container px-5 py-10">
+    <div ref={ref} id="faq" className="container px-5 py-10">
       <div className="flex flex-col items-center">
         <h2 className="lg:text-4xl md:text-3xl text-2xl font-bold text-primary">
           Frequently <span className="text-accent">asked questions</span>
@@ -48,7 +52,8 @@ const FAQ = () => {
             <Accordion.Item
               key={item.value}
               value={item.value}
-              className="bg-white shadow-sm">
+              className="bg-white shadow-sm"
+            >
               <Accordion.Control className="text-lg font-bold">
                 {item.value}
               </Accordion.Control>

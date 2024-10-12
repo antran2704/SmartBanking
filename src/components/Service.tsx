@@ -1,9 +1,14 @@
+"use client";
+
 import { Button } from "@mantine/core";
 import { FaCheck } from "react-icons/fa6";
+import useScrollActiveNavbar from "~/app/hooks/useScrollActiveNavbar";
 
 const Service = () => {
+  const { ref } = useScrollActiveNavbar({ path: "#price" });
+
   return (
-    <div className="container px-5 py-10">
+    <div ref={ref} id="price" className="container px-5 py-10">
       <div className="flex flex-col items-center">
         <h2 className="lg:text-4xl md:text-3xl text-2xl font-bold text-primary">
           An exceptional service,{" "}
@@ -28,7 +33,8 @@ const Service = () => {
             radius={"lg"}
             size="lg"
             variant="outline"
-            className="border-[#16194F] text-[#16194F] hover:text-white hover:bg-[#16194F]">
+            className="border-[#16194F] text-[#16194F] hover:text-white hover:bg-[#16194F]"
+          >
             Get Started
           </Button>
 
@@ -79,7 +85,9 @@ const Service = () => {
           </ul>
         </div>
         <div className="md:w-1/2 sm:w-3/4 w-full flex flex-col items-center p-10 bg-white rounded-[50px] shadow-lg gap-8">
-          <h3 className="lg:text-3xl md:text-2xl text-xl font-medium">PREMIUM</h3>
+          <h3 className="lg:text-3xl md:text-2xl text-xl font-medium">
+            PREMIUM
+          </h3>
           <h4 className="lg:text-4xl md:text-3xl text-2xl">
             <strong className="font-medium">$8</strong>
             <span className="md:text-2xl text-xl">/m</span>
@@ -92,7 +100,8 @@ const Service = () => {
             radius={"lg"}
             size="lg"
             variant="outline"
-            className="border-[#16194F] text-[#16194F] hover:text-white hover:bg-[#16194F]">
+            className="border-[#16194F] text-[#16194F] hover:text-white hover:bg-[#16194F]"
+          >
             Get Started
           </Button>
 
@@ -124,15 +133,11 @@ const Service = () => {
             </li>
             <li className="flex items-center gap-2">
               <FaCheck className="text-2xl text-primary" />
-              <p className="md:text-lg text-base">
-                Priority 24/7 support
-              </p>
+              <p className="md:text-lg text-base">Priority 24/7 support</p>
             </li>
             <li className="flex items-center gap-2">
               <FaCheck className="text-2xl text-primary" />
-              <p className="md:text-lg text-base">
-                Exchange 24 currencies
-              </p>
+              <p className="md:text-lg text-base">Exchange 24 currencies</p>
             </li>
             <li className="flex items-center gap-2">
               <FaCheck className="text-2xl text-primary" />

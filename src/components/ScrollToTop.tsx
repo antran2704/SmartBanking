@@ -15,8 +15,9 @@ function ScrollToTop() {
             style={transitionStyles}
             radius={"lg"}
             className="w-12 h-12 bg-accent text-white p-0 hover:bg-primary transition-all ease-linear duration-100"
-            onClick={() => scrollTo({ y: 0 })}>
-              <IoIosArrowUp className="text-2xl" />
+            onClick={() => scrollTo({ y: 0 })}
+          >
+            <IoIosArrowUp className="text-2xl" />
           </Button>
         )}
       </Transition>

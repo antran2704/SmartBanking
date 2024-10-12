@@ -1,6 +1,6 @@
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
-import { ColorSchemeScript, MantineProvider } from "@mantine/core";
+import { MantineProvider } from "@mantine/core";
 
 import "@mantine/core/styles.css";
 import "~/app/globals.scss";
@@ -8,6 +8,8 @@ import configThemeMantine from "../../configs/ThemeMantine";
 import Navbar from "~/components/Navbar";
 import ScrollToTop from "~/components/ScrollToTop";
 import Footer from "~/components/Footer";
+import ActiveNavbar from "~/components/ActiveNavbar";
+import Head from "~/components/Head";
 
 export default async function LocaleLayout({
   children,
@@ -22,16 +24,17 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <head>
-        <ColorSchemeScript />
-      </head>
+      <Head />
+
       <body id="body" className="bg-neutral-50">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <MantineProvider theme={configThemeMantine}>
-            <Navbar />
-            {children}
-            <ScrollToTop />
-            <Footer />
+            <ActiveNavbar>
+              <Navbar />
+              {children}
+              <ScrollToTop />
+              <Footer />
+            </ActiveNavbar>
           </MantineProvider>
         </NextIntlClientProvider>
       </body>

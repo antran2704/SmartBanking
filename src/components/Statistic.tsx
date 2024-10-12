@@ -1,4 +1,8 @@
+"use client";
+
 import { Button } from "@mantine/core";
+import { LegacyRef } from "react";
+import CountUp from "react-countup";
 
 const Statistic = () => {
   return (
@@ -7,11 +11,39 @@ const Statistic = () => {
         <div className="flex items-center sm:flex-row flex-col gap-5">
           <div className="sm:w-1/2 w-full p-10 rounded-[50px] bg-white shadow-lg">
             <h3 className="text-lg">Balance</h3>
-            <h4 className="md:text-4xl text-3xl font-bold text-primary">$5,600</h4>
+            <CountUp
+              start={0}
+              end={12000}
+              duration={3}
+              decimal=","
+              prefix="$ "
+              enableScrollSpy
+            >
+              {({ countUpRef }) => (
+                <h4
+                  ref={countUpRef as LegacyRef<HTMLHeadingElement>}
+                  className="lg:text-4xl text-3xl font-bold text-primary"
+                />
+              )}
+            </CountUp>
           </div>
           <div className="sm:w-1/2 w-full p-10 rounded-[50px] bg-white shadow-lg">
-            <h3 className="text-lg">Balance</h3>
-            <h4 className="md:text-4xl text-3xl font-bold text-primary">$5,600</h4>
+            <h3 className="text-lg">Last Transaction</h3>
+            <CountUp
+              start={0}
+              end={560}
+              duration={3}
+              decimal=","
+              prefix="$ "
+              enableScrollSpy
+            >
+              {({ countUpRef }) => (
+                <h4
+                  ref={countUpRef as LegacyRef<HTMLHeadingElement>}
+                  className="lg:text-4xl text-3xl font-bold text-primary"
+                />
+              )}
+            </CountUp>
           </div>
         </div>
         <div className="w-full rounded-[50px] bg-white shadow-lg p-10 mt-10">
@@ -46,7 +78,8 @@ const Statistic = () => {
               className="size-6 min-w-6"
             />
           }
-          className="bg-[#16194F] hover:bg-primary text-white px-10 transition-all ease-linear duration-75">
+          className="bg-[#16194F] hover:bg-primary text-white px-10 transition-all ease-linear duration-75"
+        >
           Register Now
         </Button>
       </div>
