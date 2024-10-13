@@ -1,4 +1,7 @@
+"use client";
+
 import { ColorSchemeScript } from "@mantine/core";
+import { usePathname } from "next/navigation";
 
 const titleContent: string = "Smart Banking";
 const description: string =
@@ -8,6 +11,8 @@ const image: string = "https://antrandev.id.vn/images/imageHeadTag.png";
 const urlWebsite: string = "https://antrandev.id.vn";
 
 const Head = () => {
+  const pathname = usePathname();
+
   return (
     <head>
       {/* Primary Meta Tags */}
@@ -16,7 +21,7 @@ const Head = () => {
       <meta name="theme-color" content="#0A0A0A" />
       <meta name="color-scheme" content="dark light" />
       <link rel="apple-touch-icon" href={image} sizes="57x57" />
-      <link rel="canonical" href={urlWebsite} />
+      <link rel="canonical" href={urlWebsite+ pathname} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="title" content={titleContent} />
       <meta name="description" content={description} />
