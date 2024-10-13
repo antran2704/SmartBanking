@@ -13,6 +13,9 @@ const Head = () => {
       {/* Primary Meta Tags */}
       <title>{titleContent}</title>
       <link rel="icon" href="/images/logo.png" />
+      <meta name="theme-color" content="#0A0A0A" />
+      <meta name="color-scheme" content="dark light" />
+      <link rel="apple-touch-icon" href={image} sizes="57x57" />
       <link rel="canonical" href={urlWebsite} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="title" content={titleContent} />
@@ -33,7 +36,10 @@ const Head = () => {
       <meta property="twitter:image" content={image} />
 
       {/* google site verification */}
-      <meta name="google-site-verification" content="LbX2O1wn_arb_DSJ-CzEDjeE4eS9sC2wqPNUjs4MdUQ" />
+      <meta
+        name="google-site-verification"
+        content="LbX2O1wn_arb_DSJ-CzEDjeE4eS9sC2wqPNUjs4MdUQ"
+      />
       <ColorSchemeScript />
     </head>
   );

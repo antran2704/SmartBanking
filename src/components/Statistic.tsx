@@ -17,6 +17,7 @@ const Statistic = () => {
               duration={3}
               decimal=","
               prefix="$ "
+              scrollSpyOnce
               enableScrollSpy
             >
               {({ countUpRef }) => (
@@ -33,6 +34,7 @@ const Statistic = () => {
               start={0}
               end={560}
               duration={3}
+              scrollSpyOnce
               decimal=","
               prefix="$ "
               enableScrollSpy
