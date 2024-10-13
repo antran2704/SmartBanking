@@ -27,6 +27,7 @@ const Head = () => {
       <meta name="description" content={description} />
 
       {/* Open Graph / Facebook */}
+      <meta property="fb:app_id" content="1107560184366459" />
       <meta property="og:type" content="website" />
       <meta property="og:url" content={urlWebsite} />
       <meta property="og:title" content={titleContent} />
